@@ -84,7 +84,7 @@ module RailsAutolink
           BRACKETS = { ']' => '[', ')' => '(', '}' => '{' }
 
           WORD_PATTERN = RUBY_VERSION < '1.9' ? '\w' : '\p{Word}'
-          TRAILING_PUNCATION_PATTERN = /[^#{WORD_PATTERN}\/-=&]$/
+          TRAILING_PUNCATION_PATTERN = /[^#{WORD_PATTERN}\/-=&\-]$/
 
           # Turns all urls into clickable links.  If a block is given, each url
           # is yielded and the result is used as the link text.
